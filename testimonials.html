@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasti Beauty Parlour – Reviews | Bridal Makeup | Mehndi | Boutique | Embroidery</title>
+
+    <meta name="description" content="Sasti Beauty Parlour – Premium bridal makeup artist, mehndi designs, blouse stitching, embroidery & boutique in Kangeyam, Tiruppur.">
+    <meta name="keywords" content="bridal makeup artist Tamil Nadu, beauty parlour Kangeyam, mehndi artist Tiruppur, boutique Kangeyam, bridal makeup Chennai">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage:'en', includedLanguages:'en,ta,ml,hi,te', autoDisplay:false },
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <style>
+        /* View More Button */
+        .view-btn{
+            margin-top:12px;
+            padding:10px 14px;
+            border:none;
+            background:#000;
+            color:#fff;
+            border-radius:10px;
+            cursor:pointer;
+            font-size:14px;
+            font-weight:600;
+            transition:0.3s;
+        }
+        .view-btn:hover{
+            background:#444;
+        }
+
+        /* Popup */
+        .popup-bg{
+            display:none;
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.8);
+            z-index:9999;
+            justify-content:center;
+            align-items:center;
+            padding:20px;
+        }
+
+        .popup-box{
+            background:#fff;
+            max-width:900px;
+            width:100%;
+            border-radius:15px;
+            padding:20px;
+            position:relative;
+            max-height:90vh;
+            overflow:auto;
+        }
+
+        .popup-close{
+            position:absolute;
+            top:10px;
+            right:15px;
+            font-size:22px;
+            cursor:pointer;
+            font-weight:bold;
+            color:#000;
+        }
+
+        .popup-title{
+            font-family:'Playfair Display', serif;
+            font-size:22px;
+            margin-bottom:15px;
+        }
+
+        .popup-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            gap:15px;
+        }
+
+        .popup-grid img{
+            width:100%;
+            border-radius:12px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .popup-grid img:hover{
+            transform:scale(1.03);
+        }
+
+        /* Highlighted Testimonial */
+        .tc-highlight{
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border: 2px solid #ffd4d4;
+            border-radius: 16px;
+            padding: 24px;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(255, 107, 107, 0.15);
+            transition: all 0.3s ease;
+        }
+        .tc-highlight:hover{
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(255, 107, 107, 0.25);
+        }
+        .tc-highlight::before{
+            content: '✦';
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            font-size: 24px;
+            color: #ff6b6b;
+            background: #fff;
+            padding: 0 8px;
+        }
+        .tc-highlight .tc-text{
+            font-size: 15px;
+            line-height: 1.7;
+            color: #333;
+            font-style: italic;
+        }
+        .tc-highlight .tc-author h5{
+            color: #ff6b6b;
+            font-weight: 700;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- ===== ANNOUNCEMENT BAR ===== -->
+<div class="ann-bar" id="annBar">
+    <div class="ann-inner">
+        <span>✦ Bridal Bookings Open for 2025–2026 Wedding Season</span>
+        <span class="ann-sep">|</span>
+        <span>Serving All Over Tamil Nadu</span>
+        <span class="ann-sep">|</span>
+        <a href="https://wa.me/919003618857" target="_blank">📲 WhatsApp Us Now →</a>
+    </div>
+    <button class="ann-close" id="annClose" aria-label="Close">✕</button>
+</div>
+
+<!-- ===== NAVBAR (SAME AS ABOUT PAGE) ===== -->
+<nav class="navbar" id="navbar">
+    <div class="nav-wrap">
+
+        <a href="index.html" class="logo">
+            <img src="PHOTOS/LOGO/sastilogo2.2.png" alt="Sasti Beauty Parlour Logo" class="logo-img">
+            <div class="logo-text-wrap">
+                <span class="logo-main">Sasti</span>
+                <span class="logo-sub">Makeup Artist</span>
+            </div>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="nl">Home</a></li>
+            <li><a href="about.html" class="nl">About</a></li>
+
+            <li class="has-drop">
+                <a href="services.html" class="nl">Services <span class="arrow">▾</span></a>
+                <div class="mega-menu">
+                    <div class="mm-col">
+                        <h6>Makeup</h6>
+                        <a href="makeup.html">Bridal Makeup</a>
+                        <a href="makeup.html">Party & Event Makeup</a>
+                        <a href="makeup.html">Bridesmaid Makeup</a>
+                        <a href="makeup.html">Groom Makeup</a>
+                    </div>
+                    <div class="mm-col">
+                        <h6>Skin & Body</h6>
+                        <a href="skin-salon.html">Facials & Skin Care</a>
+                        <a href="skin-salon.html#hair">Hair Services</a>
+                        <a href="skin-salon.html#nails">Nail Services</a>
+                        <a href="skin-salon.html#waxing">Threading & Waxing</a>
+                    </div>
+                    <div class="mm-col">
+                        <h6>Mehndi</h6>
+                        <a href="mehndi.html">Bridal Mehndi</a>
+                        <a href="mehndi.html">Arabic Mehndi</a>
+                        <a href="mehndi.html">Festival Mehndi</a>
+                        <a href="mehndi.html">Kids Mehndi</a>
+                    </div>
+                    <div class="mm-col">
+                        <h6>Fashion</h6>
+                        <a href="blouse.html">Blouse Design & Stitching</a>
+                        <a href="embroidery.html">Embroidery Work</a>
+                        <a href="tailoring.html">Tailoring Services</a>
+                        <a href="boutique.html">Boutique Collections</a>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="bridal-packages.html" class="nl">Bridal Packages</a></li>
+            <li><a href="gallery.html" class="nl">Gallery</a></li>
+            <li><a href="testimonials.html" class="nl active">Reviews</a></li>
+            <li><a href="faq.html" class="nl">FAQ</a></li>
+            <li><a href="contact.html" class="nl">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <div id="google_translate_element" class="translate-box"></div>
+            <a href="tel:+919003618857" class="nav-call">📞 Call</a>
+            <a href="https://wa.me/919003618857" target="_blank" class="btn-wa-nav">💬 WhatsApp</a>
+            <button class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+    </div>
+</nav>
+
+<!-- ===== REVIEWS SECTION ===== -->
+<section class="section testi-section" id="testimonials">
+    <div class="container">
+        <p class="pre-label center">Client Love</p>
+        <h2 class="sec-title center">What Our Brides <em>Say</em></h2>
+        <p class="sec-sub center">Real words from real brides — our greatest reward</p>
+
+        <div class="testi-grid">
+
+            <div class="tc">
+                <div class="tc-stars">★★★★☆</div>
+                <p class="tc-text">
+                    I would like to extend my heartfelt thanks to Anbu Akka from Sasti Bridal Studio for making my engagement, wedding, and reception truly magical. The makeup, hairstyle, blouse and lehenga were perfect.
+                </p>
+                <button class="view-btn" onclick="openPopup('Sruthi', sruthiPhotos)">View More</button>
+                <div class="tc-author">
+                    <div class="tc-av">S</div>
+                    <div><h5>Sruthi</h5><span>4 ★ Rating</span></div>
+                </div>
+            </div>
+
+            <div class="tc">
+                <div class="tc-stars">★★★★☆</div>
+                <p class="tc-text">
+                    Hi anbu akka.. very satisfied with makeup, hairdo, saree draping, blouse work. Got many compliments. You were punctual and caring.
+                </p>
+                <button class="view-btn" onclick="openPopup('Gayathri', gayathriPhotos)">View More</button>
+                <div class="tc-author">
+                    <div class="tc-av">G</div>
+                    <div><h5>Gayathri</h5><span>4.5 ★ Rating</span></div>
+                </div>
+            </div>
+
+            <div class="tc">
+                <div class="tc-stars">★★★☆☆</div>
+                <p class="tc-text">
+                    Akka seriously unga work super ah irunthuchu. Photoshoot vera level la vanthuchu. Muhurtham look was very nice.
+                </p>
+                <button class="view-btn" onclick="openPopup('Kayal', kayalPhotos)">View More</button>
+                <div class="tc-author">
+                    <div class="tc-av">K</div>
+                    <div><h5>Kayal</h5><span>3.8 ★ Rating</span></div>
+                </div>
+            </div>
+
+            <div class="tc">
+                <div class="tc-stars">★★★★★</div>
+                <p class="tc-text">
+                    Your work is really awesome and very impressive. Very dedicated and perfect timing. Loved my makeover completely.
+                </p>
+                <button class="view-btn" onclick="openPopup('Kalpana', kalpanaPhotos)">View More</button>
+                <div class="tc-author">
+                    <div class="tc-av">K</div>
+                    <div><h5>Kalpana</h5><span>4.8 ★ Rating</span></div>
+                </div>
+            </div>
+
+            <div class="tc">
+                <div class="tc-stars">★★★★★</div>
+                <p class="tc-text">
+                    Thank you akka.. makeup was perfect. Eye makeup, saree draping and hair do all were excellent. Everyone liked it.
+                </p>
+                <button class="view-btn" onclick="openPopup('Dheekshana', dheekshanaPhotos)">View More</button>
+                <div class="tc-author">
+                    <div class="tc-av">D</div>
+                    <div><h5>Dheekshana</h5><span>5 ★ Rating</span></div>
+                </div>
+            </div>
+
+            <div class="tc tc-highlight">
+                <div class="tc-stars">★★★★★</div>
+                <p class="tc-text">
+                    We have got 100+ customers positive reviews and we are thankful to all our brides for their love and support. We are committed to providing the best service and making every bride feel special on their big day.
+                </p>
+                <div class="tc-author">
+                    <div class="tc-av">S</div>
+                    <div><h5>Sasti Team</h5><span>100+ Reviews</span></div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- POPUP -->
+<div class="popup-bg" id="popupBg">
+    <div class="popup-box">
+        <span class="popup-close" onclick="closePopup()">✕</span>
+        <div class="popup-title" id="popupTitle"></div>
+        <div class="popup-grid" id="popupGrid"></div>
+    </div>
+</div>
+
+<script>
+    // Photos Array (ADD MORE IMAGES HERE)
+    const sruthiPhotos = [
+        "PHOTOS/reviews/WhatsApp Image 2026-04-13 at 9.36.04 AM.jpeg",
+        "PHOTOS/reviews/WhatsApp Image 2026-04-13 at 9.35.59 AM.jpeg",
+        "PHOTOS/reviews/WhatsApp Image 2026-04-13 at 9.36.09 AM.jpeg"
+    ];
+
+    const gayathriPhotos = [
+        "PHOTOS/reviews/WhatsApp Image 2026-04-13 at 9.36.05 AM.jpeg",
+        "PHOTOS/reviews/WhatsApp Image 2026-04-13 at 9.36.19 AM (1).jpeg"
+
+    ];
+
+    const kayalPhotos = [
+        "PHOTOS/reviews/WhatsApp Image 2026-04-13 at 9.36.09 AM (1).jpeg",
+        "PHOTOS/reviews/WhatsApp Image 2026-04-13 at 9.36.09 AM (2).jpeg"
+        , "PHOTOS/reviews/WhatsApp Image 2026-04-13 at 9.35.36 AM.jpeg"
+    ];
+
+    const kalpanaPhotos = [
+        "PHOTOS/reviews/WhatsApp Image 2026-04-13 at 9.36.11 AM.jpeg",
+        "PHOTOS/reviews/WhatsApp Image 2026-04-13 at 9.36.10 AM (1).jpeg"
+        , "PHOTOS/reviews/WhatsApp Image 2026-04-13 at 9.36.08 AM (1).jpeg"
+    ];
+
+    const dheekshanaPhotos = [
+        "PHOTOS/reviews/WhatsApp Image 2026-04-13 at 9.36.19 AM.jpeg",
+        "PHOTOS/reviews/WhatsApp Image 2026-04-13 at 9.36.20 AM (1).jpeg",
+        "PHOTOS/reviews/WhatsApp Image 2026-04-13 at 9.36.20 AM.jpeg"
+    ];
+
+    function openPopup(name, photos){
+        document.getElementById("popupBg").style.display = "flex";
+        document.getElementById("popupTitle").innerHTML = name + " - Review Photos";
+
+        let grid = document.getElementById("popupGrid");
+        grid.innerHTML = "";
+
+        photos.forEach(photo => {
+            let img = document.createElement("img");
+            img.src = photo;
+            img.onclick = () => window.open(photo);
+            grid.appendChild(img);
+        });
+    }
+
+    function closePopup(){
+        document.getElementById("popupBg").style.display = "none";
+    }
+
+    // Close popup if click outside
+    document.getElementById("popupBg").addEventListener("click", function(e){
+        if(e.target === this){
+            closePopup();
+        }
+    });
+</script>
+
+</body>
+</html>
